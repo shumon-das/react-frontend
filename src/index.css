@@ -1,0 +1,15 @@
+main{
+  min-height: 80vh;
+}
+.productImg{
+  height: 300px;
+}
+#root > div > main > div > div > div:nth-child(2) > div > div > table > thead:nth-child(3){
+  display: none;
+}
+.left-sidebar{
+  color: white!important;
+}
+.home-container{
+  margin: 0!important;
+}
