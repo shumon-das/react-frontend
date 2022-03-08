@@ -47,7 +47,7 @@ const Navbarr = () => {
                         </Nav>
                     </Navbar.Collapse>
 
-                    <DropdownButton id="dropdown-item-button" title="Settings">
+                    <DropdownButton id="dropdown-item-button" title="Mono Ranjan">
                         <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-home"></i> <span style={{marginRight:"0px"}}>dashboard</span></Link></Dropdown.Item>
                         <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-user"></i> <span>profile</span></Link></Dropdown.Item>
                         <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-gear"></i> <span>settings</span></Link></Dropdown.Item>

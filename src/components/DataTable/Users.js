@@ -1,5 +1,7 @@
 import { Table } from 'react-bootstrap'
 import { MDBDataTable } from 'mdbreact'
+import { Row, Col} from 'react-bootstrap'
+import SidebarLeft from '../Sidebar/SidebarLeft';
 
 function Users(){
     
@@ -181,6 +183,24 @@ function Users(){
             },
         ]
     }
-    return <MDBDataTable striped bordered hover data={data} />
+    
+    return (
+        <>
+            <div>
+                <Row>
+                    <Col sm={2}>
+                        <div className='left-sidebar'>
+                            <SidebarLeft></SidebarLeft>
+                        </div>
+                    </Col>
+                    <Col sm={10}>
+                        <MDBDataTable striped bordered hover data={data} />
+                    </Col>
+                </Row>
+            </div>
+        
+        </>
+    )
+    
 }
 export default Users

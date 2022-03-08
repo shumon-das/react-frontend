@@ -10,6 +10,22 @@ main{
 .left-sidebar{
   color: white!important;
 }
-.home-container{
-  margin: 0!important;
+
+.bannerOne{
+  height: 150px;
+}
+.bannerOne-innerOne{
+  width: 70%;
+  margin: 0;
+  float: left;
+  background-color: rgb(51, 94, 146);
+  font-style: oblique;
+  padding: 20px;
+  border-radius: 10px;
+}
+.createUserForm{
+  width: 80%;
+}
+.label{
+  padding: 10px;
 }
