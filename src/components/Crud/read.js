@@ -1,7 +1,9 @@
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
-import SidebarLeft from '../Sidebar/SidebarLeft'
+// import SidebarLeft from '../Sidebar/SidebarLeft'
+import EditModal from '../Library/Modal'
+
 // import data from './data'
 const url = 'http://localhost:5000/api/getusers'
 
@@ -25,7 +27,9 @@ const Read = () => {
 
     return <>
         <div className='row'>
-            <div className='col-md-2'><SidebarLeft/></div>
+            <div className='col-md-2'>
+                {/* <SidebarLeft/> */}
+            </div>
             <div className='col-md-9'>
                 <table className='table'>
                     <thead key="thead">
@@ -51,7 +55,18 @@ const Read = () => {
                                             <td>{user.email}</td>
                                             <td>{user.address}</td>
                                             <td>{user.choice}</td>
-                                            <td><button type='button' onClick={() => deleteUser(user.id)} className='btn btn-danger btn-sm'>Delete</button></td>
+                                            <td>
+                                                <EditModal 
+                                                    firstName={user.firstName} 
+                                                    lastName={user.lastName} 
+                                                    userName={user.userName} 
+                                                    gender={user.gender} 
+                                                    email={user.email} 
+                                                    address={user.address} 
+                                                    choice={user.choice} 
+                                                 />
+                                                <button type='button' onClick={() => deleteUser(user.id)} className='btn btn-danger btn-sm'><i className="fa-solid fa-trash"></i></button>
+                                            </td>
                                         </tr>)
                             })
                         }    

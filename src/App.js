@@ -17,6 +17,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Create from './components/Crud/create'
 import Read from './components/Crud/read'
 import Update from './components/Crud/update'
+import EditModal from './components/Library/Modal'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               <Route exact path="/create" component={Create}/>
               <Route exact path="/read" component={Read}/>
               <Route exact path="/update" component={Update}/>
+              <Route exact path="/editmodal" component={EditModal}/>
             </Container>  
           </main>  
         <Footer />  
