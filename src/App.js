@@ -9,8 +9,8 @@ import Home from './components/home/Home';
 import Users from './components/DataTable/Users';
 import DATATable from './components/DataTable/DataTable';
 import TeamPage from './components/AboutUs/Team';
-import MyDropzone from './components/DragAndDrop/Dropzone';
-import Upload from './components/DragAndDrop/FileUpload';
+import MyDropzone from './components/FileUpload/Dropzone';
+import Upload from './components/FileUpload/SingleFile';
 import CreateUser from './components/DataTable/createUser'
 import BootstrapCarousel from './components/Sidebar/BootstrapCarousel';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -18,6 +18,9 @@ import Create from './components/Crud/create'
 import Read from './components/Crud/read'
 import Update from './components/Crud/update'
 import EditModal from './components/Library/Modal'
+import SingleFile from './components/FileUpload/SingleFile'
+import MultipleFile from './components/FileUpload/MultipleFile'
+import RestrictedFileUpload from './components/FileUpload/RestrictedFileUpload'
 
 
 function App() {
@@ -25,12 +28,12 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-          <main className="py-3">
+          <main >
             <Container fluid>
               <Route exact path="/" component={Home} />
               <Route exact path="/products" component={Products}/>
               <Route exact path="/product/:id" component={Product}/>
-              <Route exact path="/table" component={Users}/>
+              <Route exact path="/users" component={Users}/>
               <Route exact path="/datatable" component={DATATable}/>
               <Route exact path="/aboutus" component={TeamPage}/>
               <Route exact path="/dropzone" component={MyDropzone}/>
@@ -42,6 +45,10 @@ function App() {
               <Route exact path="/read" component={Read}/>
               <Route exact path="/update" component={Update}/>
               <Route exact path="/editmodal" component={EditModal}/>
+              <Route exact path="/singlefile" component={SingleFile}/>
+              <Route exact path="/multiplefile" component={MultipleFile}/>
+              <Route exact path="/docsfile" component={RestrictedFileUpload}/>
+              
             </Container>  
           </main>  
         <Footer />  

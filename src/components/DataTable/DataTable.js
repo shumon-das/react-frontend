@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Row, Col} from 'react-bootstrap'
 import { MDBDataTable } from 'mdbreact';
 import {useState, useEffect} from 'react'
-import SidebarLeft from '../Sidebar/SidebarLeft';
+import Sidebar from '../Sidebar/Sidebar';
 
 function DATATable(){
 
@@ -57,24 +57,20 @@ function DATATable(){
                 ],
                 rows:content
         }
-        return (
-          <>
-              <div>
-                  <Row>
-                      <Col sm={2}>
-                          <div className='left-sidebar'>
-                              <SidebarLeft></SidebarLeft>
-                          </div>
-                      </Col>
-                      <Col sm={10}>
-                          <MDBDataTable striped bordered hover data={data} />
-                      </Col>
-                  </Row>
-              </div>
-          
-          </>
-      )
-    
+        return <>
+                  <div>
+                      <Row>
+                          <Col sm={2}>
+                              <div className='left-sidebar'>
+                                  <Sidebar></Sidebar>
+                              </div>
+                          </Col>
+                          <Col sm={10}>
+                              <MDBDataTable striped bordered hover data={data} />
+                          </Col>
+                      </Row>
+                  </div>
+               </>
         
 }
 export default DATATable

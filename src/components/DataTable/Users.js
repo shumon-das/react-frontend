@@ -1,7 +1,7 @@
 import { Table } from 'react-bootstrap'
 import { MDBDataTable } from 'mdbreact'
 import { Row, Col} from 'react-bootstrap'
-import SidebarLeft from '../Sidebar/SidebarLeft';
+import Sidebar from '../Sidebar/Sidebar'
 
 function Users(){
     
@@ -190,7 +190,7 @@ function Users(){
                 <Row>
                     <Col sm={2}>
                         <div className='left-sidebar'>
-                            <SidebarLeft></SidebarLeft>
+                            <Sidebar></Sidebar>
                         </div>
                     </Col>
                     <Col sm={10}>

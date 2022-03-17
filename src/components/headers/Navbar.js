@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Navbarr = () => {
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar bg="dark" variant="dark" className='sticky-top' expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
                         <Nav.Link>Home</Nav.Link>
@@ -26,7 +26,7 @@ const Navbarr = () => {
                             <LinkContainer to="/datatable">
                                 <Nav.Link><i className="fas fa-table"></i> Data Table</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/table">
+                            <LinkContainer to="/users">
                                 <Nav.Link><i className="fas fa-users"></i> Users</Nav.Link>
                             </LinkContainer>
                              <LinkContainer to="/products">
@@ -47,10 +47,10 @@ const Navbarr = () => {
                         </Nav>
                     </Navbar.Collapse>
 
-                    <DropdownButton id="dropdown-item-button" title="Mono Ranjan">
-                        <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-home"></i> <span style={{marginRight:"0px"}}>dashboard</span></Link></Dropdown.Item>
-                        <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-user"></i> <span>profile</span></Link></Dropdown.Item>
-                        <Dropdown.Item as="button"><Link to="/"><i class="fa-solid fa-gear"></i> <span>settings</span></Link></Dropdown.Item>
+                    <DropdownButton id="dropdown-item-button" title="Mono Ranjan" style={{paddingLeft: "0px"}}>
+                        <Dropdown.Item as="button"><Link to="/"><i className="fa-solid fa-home"></i> <span style={{marginRight:"0px"}}>dashboard</span></Link></Dropdown.Item>
+                        <Dropdown.Item as="button"><Link to="/"><i className="fa-solid fa-user"></i> <span>profile</span></Link></Dropdown.Item>
+                        <Dropdown.Item as="button"><Link to="/"><i className="fa-solid fa-gear"></i> <span>settings</span></Link></Dropdown.Item>
                     </DropdownButton>
 
                 </Container>

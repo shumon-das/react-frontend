@@ -1,51 +1,52 @@
-
-import { Accordion, Card } from "react-bootstrap";
+import React from 'react'
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
+    const [crudShowHide, setCrudShowHide] = useState('hide');
+    const [crud2ShowHide, setCrud2ShowHide] = useState('hide');
+    const [uploadShowHide, setUploadShowHide] = useState('hide');
   return <>
-            <div className='sidebar' style={{width:"20%", }}>
-                  <Accordion>
-                        <Card>
-                            <Accordion.Toggle as={"Card.Header"} eventKey="0">
-                                Dashboard
-                            </Accordion.Toggle>
-
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body>This is first tab body</Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-
-                        <Card>
-                            <Accordion.Toggle as={"Card.Header"} eventKey="1">
-                                Dropzone
-                            </Accordion.Toggle>
-
-                            <Accordion.Collapse eventKey="1">
-                                <Card.Body>This is second tab body</Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-
-                        <Card>
-                            <Accordion.Toggle as={"Card.Header"} eventKey="2">
-                                Users
-                            </Accordion.Toggle>
-
-                            <Accordion.Collapse eventKey="2">
-                                <Card.Body>This is second tab body</Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-
-                        <Card>
-                            <Accordion.Toggle as={"Card.Header"} eventKey="3">
-                                Data Table
-                            </Accordion.Toggle>
-
-                            <Accordion.Collapse eventKey="3">
-                                <Card.Body>This is second tab body</Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
+            <div className='sidebar'>
+                  <div className="sideber-menu"></div>
+                  <ul>
+                      <li><Link to="/products"><i className="fas fa-home"></i> Dashboard</Link></li>
+                      <li style={{paddingLeft:"20px"}} onClick={() => crudShowHide === 'hide' ? setCrudShowHide('show') : setCrudShowHide('hide')}>
+                          Crud 
+                          <i className="fa fa-caret-down"></i>
+                          <ul className={crudShowHide}>
+                              <li><Link to="/create">Create</Link></li>
+                              <li><Link to="/read">Read</Link></li>
+                              <li><Link to="/update">Update</Link></li>
+                              <li><Link to="/delete">Delete</Link></li>
+                          </ul>
+                          
+                      </li>                      
+                      <li><Link to="/users"><i className="fas fa-users"></i> Users</Link></li>
+                      <li style={{paddingLeft:"20px"}} onClick={() => crud2ShowHide === 'hide' ? setCrud2ShowHide('show') : setCrud2ShowHide('hide')}>
+                          Crud 
+                          <i className="fa fa-caret-down"></i>
+                          <ul className={crud2ShowHide}>
+                              <li><Link to="/create">Create</Link></li>
+                              <li><Link to="/read">Read</Link></li>
+                              <li><Link to="/update">Update</Link></li>
+                              <li><Link to="/delete">Delete</Link></li>
+                          </ul>
+                      </li>
+                      <li><Link to="/datatable"><i className="fas fa-table"></i> Datatable</Link></li>
+                      <li><Link to="/carousel"><i className="fas fa-history"></i>Carousel</Link></li>
+                      <li style={{paddingLeft:"20px"}} onClick={() => uploadShowHide === 'hide' ? setUploadShowHide('show') : setUploadShowHide('hide')}>
+                          File Upload 
+                          <i className="fa fa-caret-down"></i>
+                          <ul className={uploadShowHide}>
+                              <li><Link to="/singlefile">Single File</Link></li>
+                              <li><Link to="/multiplefile">Multiple File</Link></li>
+                              <li><Link to="/dropzone">Dropzone</Link></li>
+                              <li><Link to="/docsfile">Documents</Link></li>
+                          </ul>
+                      </li>
+                  </ul>
             </div>
           </>
 }

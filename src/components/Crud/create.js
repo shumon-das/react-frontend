@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import {Row, Col, Button,  Form } from 'react-bootstrap'
 import axios from 'axios'
-import SidebarLeft from '../Sidebar/SidebarLeft';
+import Sidebar from '../Sidebar/Sidebar';
 
 const Create = () => {
 
@@ -38,7 +38,7 @@ const Create = () => {
     return (
             <div className='create-user-form'>
                 <Row>
-                    <Col sm={2}><SidebarLeft/></Col>
+                    <Col sm={2}><Sidebar/></Col>
                     <Col sm={9}>
                         <Form>
                             <Row>

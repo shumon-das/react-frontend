@@ -1,7 +1,7 @@
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react'
-// import SidebarLeft from '../Sidebar/SidebarLeft'
+import Sidebar from '../Sidebar/Sidebar'
 import EditModal from '../Library/Modal'
 
 // import data from './data'
@@ -28,7 +28,7 @@ const Read = () => {
     return <>
         <div className='row'>
             <div className='col-md-2'>
-                {/* <SidebarLeft/> */}
+                <Sidebar/>
             </div>
             <div className='col-md-9'>
                 <table className='table'>

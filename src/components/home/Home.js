@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col} from 'react-bootstrap'
-import SidebarLeft from '../Sidebar/SidebarLeft'
+import Sidebar from '../Sidebar/Sidebar'
 import WelcomeBanner from './welcomeBanner'
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
                 <Row>
                     <Col sm={2}>
                         <div className='left-sidebar'>
-                            <SidebarLeft></SidebarLeft>
+                            <Sidebar></Sidebar>
                         </div>
                     </Col>
                     <Col sm={10}>

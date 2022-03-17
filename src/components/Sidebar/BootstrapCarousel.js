@@ -1,4 +1,4 @@
-import SidebarLeft from './SidebarLeft';
+import Sidebar from './Sidebar'
 import {Row, Col}  from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel'
 
@@ -9,15 +9,15 @@ const BootstrapCarousel = () => {
               <Row>
                     <Col sm={2}>
                         <div className='left-sidebar'>
-                            <SidebarLeft></SidebarLeft>
+                            <Sidebar></Sidebar>
                         </div>
                     </Col>
                     <Col sm={10}>
-                      <Carousel variant="dark" style={{width:"50%", margin:"auto"}}>
+                      <Carousel variant="dark" style={{width:"90%", height:"800px", margin:"auto"}}>
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src="https://themewagon.com/wp-content/uploads/2021/11/purple-react-1.png"
+                            src="https://wallpaperaccess.com/full/1222798.jpg"
                             alt="First slide"
                           />
                           <Carousel.Caption>
@@ -28,7 +28,7 @@ const BootstrapCarousel = () => {
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src="https://codedthemes.com/wp-content/uploads/edd/2021/03/Codedthemes_main-1.png"
+                            src="https://www.hdnicewallpapers.com/Walls/Big/Sparrow/Very_Cute_Blue_Sparrow_on_Branch.jpg"
                             alt="Second slide"
                           />
                           <Carousel.Caption>
@@ -39,7 +39,7 @@ const BootstrapCarousel = () => {
                         <Carousel.Item>
                           <img
                             className="d-block w-100"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2dY3AjX8s5cytdJ-cKhkUqBmy0zQewJjhQ&usqp=CAU"
+                            src="https://www.whoa.in/download/cute-little-baby-girl-enjoy-the-natural-hd-cute-baby-wallpaper"
                             alt="Third slide"
                           />
                           <Carousel.Caption>

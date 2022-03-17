@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Row, Col, Form, InputGroup, Button} from 'react-bootstrap'
-import SidebarLeft from "../Sidebar/SidebarLeft"
+import Sidebar from '../Sidebar/Sidebar';
 
 
 const CreateUser = () => {
@@ -22,7 +22,7 @@ const CreateUser = () => {
                 <Row>
                     <Col sm={2}>
                         <div className='left-sidebar'>
-                            <SidebarLeft></SidebarLeft>
+                            <Sidebar></Sidebar>
                         </div>
                     </Col>
                     <Col sm={10}>
